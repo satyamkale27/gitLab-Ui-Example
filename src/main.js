@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import setConfigs from "@gitlab/ui/dist/config";
 
-createApp(App).mount('#app')
+setConfigs();
+
+new Vue({
+  render: (h) => h(App),
+}).$mount("#app");
